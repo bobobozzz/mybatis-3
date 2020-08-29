@@ -123,11 +123,14 @@
     <url>https://travis-ci.org/mybatis/mybatis-3/</url>
   </ciManagement>
   <distributionManagement>
-    <site>
-      <id>gh-pages</id>
-      <name>Mybatis GitHub Pages</name>
-      <url>git:ssh://git@github.com/mybatis/mybatis-3.git?gh-pages#</url>
-    </site>
+    <snapshotRepository>
+        <id>devSnapshot</id>
+        <url>http://dev.nexus:8081/repository/maven-snapshots</url>
+    </snapshotRepository>
+    <repository>
+        <id>devRelease</id>
+        <url>http://dev.nexus:8081/repository/maven-releases</url>
+    </repository>
   </distributionManagement>
 
   <properties>
